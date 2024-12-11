@@ -1,0 +1,224 @@
+/restaurant-website
+  ├── /css
+  │     └── styles.css
+  ├── /js
+  │     └── script.js
+  ├── index.html
+  ├── README.md
+  ├── LICENSE
+  └── .gitignore
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Gourmet</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#reservations">Réservations</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>Bienvenue au Restaurant Gourmet</h1>
+    <p>Découvrez des saveurs inoubliables.</p>
+</section>
+
+<section id="about">
+    <h2>À propos de nous</h2>
+    <p>Nous proposons des plats authentiques avec des ingrédients frais et locaux.</p>
+</section>
+
+<section id="menu">
+    <h2>Notre Menu</h2>
+    <div class="menu-items">
+        <div class="menu-item">
+            <h3>Plat 1</h3>
+            <p>Description du plat 1</p>
+            <p><strong>Prix: 15€</strong></p>
+        </div>
+        <div class="menu-item">
+            <h3>Plat 2</h3>
+            <p>Description du plat 2</p>
+            <p><strong>Prix: 20€</strong></p>
+        </div>
+    </div>
+</section>
+
+<section id="reservations">
+    <h2>Réserver une table</h2>
+    <form id="reservation-form">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Heure</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="guests">Nombre de personnes</label>
+        <input type="number" id="guests" name="guests" min="1" required>
+
+        <button type="submit">Réserver</button>
+    </form>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <div class="blog-posts">
+        <div class="blog-post">
+            <h3>Article 1</h3>
+            <p>Introduction de l'article 1</p>
+            <a href="#">Lire plus</a>
+        </div>
+        <div class="blog-post">
+            <h3>Article 2</h3>
+            <p>Introduction de l'article 2</p>
+            <a href="#">Lire plus</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contact-form">
+        <label for="name-contact">Nom</label>
+        <input type="text" id="name-contact" name="name-contact" required>
+
+        <label for="email-contact">Email</label>
+        <input type="email" id="email-contact" name="email-contact" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2024 Restaurant Gourmet - Tous droits réservés</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#menu .menu-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+#reservations form, #contact form {
+    display: grid;
+    gap: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+// Gestion du formulaire de réservation
+const reservationForm = document.getElementById('reservation-form');
+reservationForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Votre réservation a bien été envoyée !');
+});
+
+// Gestion du formulaire de contact
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Votre message a bien été envoyé !');
+});
+# Restaurant Gourmet
+
+Un site web de restaurant minimaliste avec les sections suivantes :
+- **Accueil**  
+- **À propos**  
+- **Menu**  
+- **Réservations** (formulaire de réservation)  
+- **Blog** (aperçu des articles)  
+- **Contact** (formulaire de contact)  
+
+## Fonctionnalités
+- Formulaire de réservation
+- Formulaire de contact
+- Blog
+- Système de paiement en ligne (à intégrer)
+
+## Installation
+1. Cloner le projet :  
+   `git clone https://github.com/votre-utilisateur/restaurant-website.git`
+
+2. Ouvrir le fichier `index.html` dans un navigateur web.
+
+## Licence
+Ce projet est sous la licence MIT.
+MIT License
+
+Copyright (c) 2024 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+node_modules/
+dist/
+.DS_Store
